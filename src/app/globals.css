@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FEFDFB;
+  --foreground: #3D3832;
+  --card-bg: #FDF8F0;
+  --border: #E4DCD0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 留白感 */
+.page-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  min-height: 100vh;
+}
+
+/* 对话气泡样式 */
+.chat-bubble {
+  max-width: 85%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.chat-bubble-ai {
+  background: #FDF8F0;
+  color: #3D3832;
+  border-bottom-left-radius: 6px;
+  margin-right: auto;
+}
+
+.chat-bubble-user {
+  background: #F0EBE3;
+  color: #3D3832;
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+}
+
+/* 柔和的过渡 */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4CFC3;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B0A0;
+}
